@@ -23,6 +23,10 @@ This repository contains an example of running the [Arduino ChainableLED sketch]
 
 1. Done!
 
+## Building with the Online Compiler
+
+Not supported. The Arduino core cannot currently be compiled under under the ARMCC compiler.
+
 ## The sketch and bootstrapping
 
 The sketch is located in [source/sketch.cpp](source/sketch.cpp).
