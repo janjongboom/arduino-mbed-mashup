@@ -6,6 +6,8 @@ This repository contains an example of running the [Arduino ChainableLED sketch]
 
 ## Building with Mbed CLI
 
+**Note:** You can only build this repository on a **case-sensitive** file system (due to naming issues around `String.cpp` / `string.cpp`). On macOS follow [these instructions](https://coderwall.com/p/mgi8ja/case-sensitive-git-in-mac-os-x-like-a-pro) to create a case-sensitive mount point.
+
 1. Connect a Grove Chainable LED to pin D4/D5 on your development board.
 1. Import this application:
 
@@ -37,3 +39,10 @@ int main() {
 ```
 
 Here you'll have the full power of Mbed OS on your hands, so you can start new threads, use the file system, or use one of the network drivers. See [source/sketch.cpp.multithreaded](source/sketch.cpp.multithreaded) for an example.
+
+## Help
+
+* Q: I receive errors that `strlen`, `memmove` or other functions are not found.
+    * A: This project can only be built on case-sensitive file systems. See the note under 'Building with Mbed CLI'.
+* Q: I receive errors that the `D0` symbol cannot be found.
+    * A: Your development board doesn't support Arduino pins (in PinNames.h in Mbed OS). You need to create a custom pin map in `variant.cpp`.
