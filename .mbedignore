@@ -1,0 +1,7 @@
+ArduinoCore-nRF528x-mbedos/cores/arduino/api/
+ArduinoCore-nRF528x-mbedos/cores/arduino/USB/
+ArduinoCore-nRF528x-mbedos/libraries/PDM/
+ArduinoCore-nRF528x-mbedos/libraries/USBHID/
+ArduinoCore-nRF528x-mbedos/libraries/USBMSD/
+ArduinoCore-nRF528x-mbedos/variants/
+mbed-os/usb/
