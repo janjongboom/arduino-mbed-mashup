@@ -26,31 +26,31 @@ extern "C" unsigned int PINCOUNT_fn();
 
 // LEDs
 // ----
-#define PIN_LED     PA_5
+#define PIN_LED     LED1
 #define LED_BUILTIN PIN_LED
 
 // Analog pins
 // -----------
-#define PIN_A0 PC_5
-#define PIN_A1 PC_4
-#define PIN_A2 PC_3
-#define PIN_A3 PC_2
-#define PIN_A4 PC_1
-#define PIN_A5 PC_0
+#define PIN_A0 A0
+#define PIN_A1 A1
+#define PIN_A2 A2
+#define PIN_A3 A3
+#define PIN_A4 A4
+#define PIN_A5 A5
 #define ADC_RESOLUTION 12
 
 /*
  * Serial interfaces
  */
 // Serial (EDBG)
-#define PIN_SERIAL_RX PB_7
-#define PIN_SERIAL_TX PB_6
+#define PIN_SERIAL_RX SERIAL_RX
+#define PIN_SERIAL_TX SERIAL_TX
 
 // SPI
-#define PIN_SPI_MISO  PA_6
-#define PIN_SPI_MOSI  PA_7
-#define PIN_SPI_SCK   PA_5
-#define PIN_SPI_SS    PA_2
+#define PIN_SPI_MISO  SPI_MISO
+#define PIN_SPI_MOSI  SPI_MOSI
+#define PIN_SPI_SCK   SPI_SCK
+#define PIN_SPI_SS    SPI_CS
 
 static const uint8_t SS   = PIN_SPI_SS;   // SPI Slave SS not used. Set here only for reference.
 static const uint8_t MOSI = PIN_SPI_MOSI;
@@ -58,8 +58,8 @@ static const uint8_t MISO = PIN_SPI_MISO;
 static const uint8_t SCK  = PIN_SPI_SCK;
 
 // Wire
-#define PIN_WIRE_SDA        PB_9
-#define PIN_WIRE_SCL        PB_8
+#define PIN_WIRE_SDA        I2C_SDA
+#define PIN_WIRE_SCL        I2C_SCL
 
 // #define PIN_WIRE_SDA1       (30u)
 // #define PIN_WIRE_SCL1       (31u)
@@ -98,24 +98,12 @@ static const uint8_t SCK  = PIN_SPI_SCK;
 
 // Mbed specific defines
 #define SERIAL_HOWMANY		1
-#define SERIAL1_TX			(digitalPinToPinName(PIN_SERIAL_TX))
-#define SERIAL1_RX			(digitalPinToPinName(PIN_SERIAL_RX))
+#define SERIAL1_TX			PIN_SERIAL_TX
+#define SERIAL1_RX			PIN_SERIAL_RX
 
-#define HAS_UNIQUE_ISERIAL_DESCRIPTOR
-#define BOARD_VENDORID		0x374b
-#define BOARD_PRODUCTID		0x0483
-#define BOARD_NAME			"DISCO-L475VG-IOT01A"
+#define BOARD_NAME			"GENERIC-MBED-OS"
 
 #define DFU_MAGIC_SERIAL_ONLY_RESET   0xb0
-
-#define I2C_SDA				(digitalPinToPinName(PIN_WIRE_SDA))
-#define I2C_SCL				(digitalPinToPinName(PIN_WIRE_SCL))
-#define I2C_SDA1			(digitalPinToPinName(PIN_WIRE_SDA1))
-#define I2C_SCL1			(digitalPinToPinName(PIN_WIRE_SCL1))
-
-#define SPI_MISO			(digitalPinToPinName(PIN_SPI_MISO))
-#define SPI_MOSI			(digitalPinToPinName(PIN_SPI_MOSI))
-#define SPI_SCK				(digitalPinToPinName(PIN_SPI_SCK))
 
 #define digitalPinToPort(P)		(digitalPinToPinName(P)/32)
 
