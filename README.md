@@ -6,7 +6,7 @@ This repository contains an example of running the [Arduino ChainableLED sketch]
 
 ## Building with Mbed CLI
 
-**Note:** You can only build this repository on a **case-sensitive** file system (due to naming issues around `String.cpp` / `string.cpp`). On macOS follow [these instructions](https://coderwall.com/p/mgi8ja/case-sensitive-git-in-mac-os-x-like-a-pro) to create a case-sensitive mount point.
+**Note:** You can only build this repository on a **case-sensitive** file system (due to naming issues around `String.cpp` / `string.cpp`). On macOS follow [these instructions](https://coderwall.com/p/mgi8ja/case-sensitive-git-in-mac-os-x-like-a-pro) to create a case-sensitive mount point. On Windows, follow [these instructions](https://superuser.com/questions/266110/how-do-you-make-windows-7-fully-case-sensitive-with-respect-to-the-filesystem) to enable case-sensitivity on your file system.
 
 1. Connect a Grove Chainable LED to pin D4/D5 on your development board.
 1. Import this application:
